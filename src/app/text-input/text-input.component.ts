@@ -15,7 +15,7 @@ export class TextInputComponent implements OnInit {
 
   constructor() { }
   @ViewChild('moneyButton', {static: true}) moneyButtonElem: ElementRef;
-  private message: string;
+  message: string;
 
   ngOnInit() {
   }

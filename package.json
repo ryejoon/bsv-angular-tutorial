@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod-ghp": "ng build --prod --base-href 'https://ryejoon.github.io/bsv-angular-tutorial/' && ngh --dir ./dist/bsv-tutorial",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

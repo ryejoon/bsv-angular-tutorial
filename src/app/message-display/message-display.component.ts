@@ -14,7 +14,7 @@ import {MessageStoreService} from '../message-store.service';
 })
 export class MessageDisplayComponent implements OnInit {
 
-  constructor(private messageStore: MessageStoreService) { }
+  constructor(public messageStore: MessageStoreService) { }
 
   ngOnInit() {
   }

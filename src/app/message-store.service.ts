@@ -32,7 +32,7 @@ export class MessageStoreService {
           'out.tape.cell': {
             $elemMatch: {
               i: 0,
-              s: '1NdoA7kgUnudC9Q1hywaZi8ru2MJgS999b'
+              s: PROTOCOL_KEY
             }
           }
         },
