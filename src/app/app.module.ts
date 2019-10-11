@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TextInputComponent } from './text-input/text-input.component';
+import {FormsModule} from '@angular/forms';
+import { MessageDisplayComponent } from './message-display/message-display.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TextInputComponent,
+    MessageDisplayComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
