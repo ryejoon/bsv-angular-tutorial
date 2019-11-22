@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   moneyubttonclient: MoneyButtonClient;
 
   ngOnInit() {
-    this.moneyubttonclient = new MoneyButtonClient('a28da3069781ebaaac5c9b5c6331eeba');
+    this.moneyubttonclient = new MoneyButtonClient('2480a16f3653290b4c494d59c1c4e733');
     const refreshToken = this.moneyubttonclient.getRefreshToken();
     console.log(refreshToken);
     if (!refreshToken) {

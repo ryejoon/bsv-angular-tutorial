@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod-ghp": "ng build --prod --base-href 'https://ryejoon.github.io/bsv-angular-tutorial/' && ngh --dir ./dist/bsv-tutorial",
+    "build:prod-ghp": "ng deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,12 +23,13 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@moneybutton/api-client": "latest",
+    "@moneybutton/client": "latest",
+    "angular-cli-ghpages": "^0.6.0",
     "hammerjs": "^2.0.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
-    "@moneybutton/client": "latest",
-    "@moneybutton/api-client": "latest"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
