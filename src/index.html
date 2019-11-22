@@ -4,10 +4,16 @@
   <meta charset="utf-8">
   <title>BsvTutorial</title>
   <base href="/">
+  <!-- https://stackoverflow.com/questions/50356408/upgrading-to-angular-6-x-gives-uncaught-referenceerror-global-is-not-defined -->
+  <script>
+      var process = process || {};
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <script src="https://www.moneybutton.com/moneybutton.js"></script>
   <script type="text/javascript" src="https://unpkg.com/bsv@0.30.0/bsv.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>

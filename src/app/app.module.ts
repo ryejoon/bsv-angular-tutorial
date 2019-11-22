@@ -7,6 +7,7 @@ import { TextInputComponent } from './text-input/text-input.component';
 import {FormsModule} from '@angular/forms';
 import { MessageDisplayComponent } from './message-display/message-display.component';
 import {HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

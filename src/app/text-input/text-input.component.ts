@@ -11,14 +11,11 @@ declare var bsv: any;
   `,
   styles: []
 })
-export class TextInputComponent implements OnInit {
+export class TextInputComponent {
 
   constructor() { }
   @ViewChild('moneyButton', {static: true}) moneyButtonElem: ElementRef;
   message: string;
-
-  ngOnInit() {
-  }
 
   confirm() {
     moneyButton.render(this.moneyButtonElem.nativeElement, {
