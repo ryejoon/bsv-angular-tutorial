@@ -16,7 +16,11 @@ export class AppComponent implements OnInit {
   moneyubttonclient: MoneyButtonClient;
 
   ngOnInit() {
-    this.moneyubttonclient = new MoneyButtonClient('2480a16f3653290b4c494d59c1c4e733');
+    // locahost:4200
+    this.moneyubttonclient = new MoneyButtonClient('9a50dab1d78f244a0a418d29c88f3a99');
+    // ryejoon.github.io//bsv-angular-tutorial/
+    // this.moneyubttonclient = new MoneyButtonClient('2480a16f3653290b4c494d59c1c4e733');
+
     const refreshToken = this.moneyubttonclient.getRefreshToken();
     console.log(refreshToken);
     if (!refreshToken) {
@@ -24,11 +28,27 @@ export class AppComponent implements OnInit {
     }
 
     this.moneyubttonclient.handleAuthorizationResponse()
-      .then(res => console.log(res));
+      .then(async res => {
+        console.log(res);
+        const refreshToken2 = this.moneyubttonclient.getRefreshToken();
+        console.log(refreshToken2);
+        const identity = await this.moneyubttonclient.getIdentity();
+        console.log(identity);
+        const prof = await this.moneyubttonclient.getUserProfile(identity.id);
+        console.log(prof);
+
+        // const balance = await this.moneyubttonclient.getBalance(identity.id);
+        // console.log(balance);
+      });
   }
 
   requestMbOAuth() {
+    // this.moneyubttonclient.requestAuthorization('users.balance:read',
+    //   'http://localhost:4200/');
     this.moneyubttonclient.requestAuthorization('auth.user_identity:read',
-      'https://ryejoon.github.io/bsv-angular-tutorial/');
+      'http://localhost:4200/');
+    this.moneyubttonclient.requestAuthorization('users.profiles:read',
+      'http://localhost:4200/');
+      // 'https://ryejoon.github.io/bsv-angular-tutorial/');
   }
 }
